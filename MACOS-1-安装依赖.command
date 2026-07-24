@@ -138,5 +138,5 @@ fi
 
 echo
 echo "Installation completed successfully."
-echo "Double-click 启动WB分析.command to open the GUI."
+echo "Double-click MACOS-2-启动WB分析.command to open the GUI."
 pause_and_exit 0

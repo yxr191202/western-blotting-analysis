@@ -76,7 +76,7 @@ if errorlevel 1 (
 
 echo.
 echo Installation completed successfully.
-echo Double-click start_wb_windows.bat to open the GUI.
+echo Double-click WINDOWS-2-启动WB分析.bat to open the GUI.
 pause
 endlocal
 exit /b 0
