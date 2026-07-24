@@ -2,6 +2,10 @@
 
 这是一个本地运行的 Python GUI 软件，用于 Western blot（WB）条带识别、手工选区、背景校正和灰度定量。
 
+## 软件界面
+
+![WB 条带灰度分析软件界面](docs/images/wb-gui-overview.png)
+
 ## 功能
 
 - 分别选择内参图像和目的图像，支持 PNG、JPEG、TIFF、BMP
