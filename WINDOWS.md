@@ -3,21 +3,21 @@
 ## 系统要求
 
 - Windows 10 或 Windows 11
-- Python 3.10 或更高版本
-- 建议从 [python.org](https://www.python.org/downloads/windows/) 安装 64 位 Python
+- 可使用 WinGet 或 PowerShell 联网安装软件
 
-安装 Python 时请勾选 **Add python.exe to PATH**，并保留 Tcl/Tk 组件。
+依赖安装脚本会优先复用已有的 Python 3.10 或更高版本；未找到时会自动安装 Python 3.12。
 
 ## 双击启动
 
 1. 下载或解压完整项目文件夹。
-2. 双击 `start_wb_windows.bat`。
-3. 首次运行时，脚本会自动安装 `requirements.txt` 中缺少的依赖，然后启动软件。
+2. 首次使用时双击 `WINDOWS-1-安装依赖.bat`，等待 Python 和项目依赖安装完成。
+3. 双击 `WINDOWS-2-启动WB分析.bat` 启动软件。
 
 如果 Windows 阻止脚本运行，可右键脚本并选择“打开”，或在项目目录的命令提示符中运行：
 
 ```bat
-start_wb_windows.bat
+WINDOWS-1-安装依赖.bat
+WINDOWS-2-启动WB分析.bat
 ```
 
 ## 手动启动
@@ -43,7 +43,7 @@ py -3 run_wb.py
 
 ### 提示找不到 Python
 
-重新安装 Python，并勾选 **Add python.exe to PATH**。安装后关闭并重新打开命令提示符。
+重新运行 `WINDOWS-1-安装依赖.bat`。若自动安装失败，可从 [python.org](https://www.python.org/downloads/windows/) 手动安装，并勾选 **Add python.exe to PATH**。
 
 ### 提示缺少 Tkinter
 

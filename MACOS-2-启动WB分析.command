@@ -10,7 +10,7 @@ fi
 
 if ! "$PYTHON_BIN" -c 'import tkinter, numpy, scipy, skimage, PIL' >/dev/null 2>&1; then
     echo "Required dependencies are not installed."
-    echo "Double-click install_dependencies_macos.command first."
+    echo "Double-click MACOS-1-安装依赖.command first."
     echo
     read -r "?Press Enter to close this window..."
     exit 1

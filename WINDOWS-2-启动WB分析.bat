@@ -38,7 +38,7 @@ if errorlevel 1 (
 "%PYTHON_EXE%" %PYTHON_ARGS% -c "import tkinter, numpy, scipy, skimage, PIL" >nul 2>&1
 if errorlevel 1 (
     echo Required dependencies are not installed.
-    echo Double-click install_dependencies_windows.bat first.
+    echo Double-click WINDOWS-1-安装依赖.bat first.
     pause
     exit /b 1
 )
