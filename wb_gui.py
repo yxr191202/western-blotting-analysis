@@ -267,8 +267,14 @@ class WBAnalyzerApp(tk.Tk):
     def __init__(self) -> None:
         super().__init__()
         self.title(APP_TITLE)
-        self.geometry("1480x850")
-        self.minsize(1050, 680)
+        screen_width = self.winfo_screenwidth()
+        screen_height = self.winfo_screenheight()
+        minimum_width = min(1050, max(760, screen_width - 40))
+        minimum_height = min(680, max(540, screen_height - 80))
+        initial_width = max(minimum_width, min(1480, screen_width - 80))
+        initial_height = max(minimum_height, min(850, screen_height - 100))
+        self.geometry(f"{initial_width}x{initial_height}")
+        self.minsize(minimum_width, minimum_height)
 
         self.original_image: Image.Image | None = None
         self.gray: np.ndarray | None = None
@@ -494,6 +500,8 @@ class WBAnalyzerApp(tk.Tk):
         self.bind("<BackSpace>", lambda _e: self.delete_selected())
         self.bind("<Command-o>", lambda _e: self.open_image(self.active_image_key))
         self.bind("<Command-s>", lambda _e: self.export_csv())
+        self.bind("<Control-o>", lambda _e: self.open_image(self.active_image_key))
+        self.bind("<Control-s>", lambda _e: self.export_csv())
 
     def _sync_active_state(self) -> None:
         state = self.image_states[self.active_image_key]
